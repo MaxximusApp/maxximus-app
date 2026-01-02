@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+  
+  body.masculino {
+    @apply bg-gray-900 text-gray-100;
+  }
+  
+  body.feminino {
+    @apply bg-gray-50 text-gray-800;
+  }
+}
+
+@layer components {
+  .card-masculino {
+    @apply bg-gray-800 border border-gray-700;
+  }
+  
+  .card-feminino {
+    @apply bg-white border border-gray-200 shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary-masculino {
+    @apply bg-red-600 hover:bg-red-700 text-white;
+  }
+  
+  .btn-primary-feminino {
+    @apply bg-pink-500 hover:bg-pink-600 text-white;
+  }
+}
