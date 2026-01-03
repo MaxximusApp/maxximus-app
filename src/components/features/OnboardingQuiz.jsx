@@ -70,13 +70,22 @@ const OnboardingQuiz = () => {
         pergunta,
         resposta: resposta.toString()
       }))
-      
-      const { error: quizError } = await supabase
-        .from('quiz_respostas')
-        .insert(quizAnswers.map(answer => ({
-          user_id: (await supabase.auth.getUser()).data.user.id,
-          ...answer
-        })))
+ // Linha 73 (vazia)
+
+// Linha 74-75: Pegar o usuário
+const { data: { user } } = await supabase.auth.getUser();
+
+// Linha 76-81: Inserir respostas
+// Linha 79-84: Inserir respostas
+const { error: quizError } = await supabase
+  .from('quiz_respostas')
+  .insert(quizAnswers.map(answer => ({
+    user_id: user.id,
+    ...answer
+  })))
+
+// Linha 83: if (quizError) throw quizError
+if (quizError) throw quizError
       
       if (quizError) throw quizError
       

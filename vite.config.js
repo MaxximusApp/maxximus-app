@@ -7,62 +7,30 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      includeAssets: ['favicon.ico'],
       manifest: {
         name: 'Maxximus App',
         short_name: 'Maxximus',
-        description: 'Aplicativo de desenvolvimento pessoal e hábitos',
+        description: 'Aplicativo de desenvolvimento pessoal',
         theme_color: '#0A0A0A',
-        background_color: '#0A0A0A',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
         icons: [
           {
-            src: '/icons/icon-72x72.png',
-            sizes: '72x72',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-96x96.png',
-            sizes: '96x96',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-128x128.png',
-            sizes: '128x128',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-144x144.png',
-            sizes: '144x144',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-152x152.png',
-            sizes: '152x152',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-192x192.png',
+            src: '/vite.svg',
             sizes: '192x192',
-            type: 'image/png',
-            purpose: 'any maskable'
+            type: 'image/svg+xml'
           },
           {
-            src: '/icons/icon-384x384.png',
-            sizes: '384x384',
-            type: 'image/png'
-          },
-          {
-            src: '/icons/icon-512x512.png',
+            src: '/vite.svg',
             sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
+            type: 'image/svg+xml'
           }
         ]
       }
     })
-  ],
+  ]
 })
+globIgnores: [
+  "**/node_modules/**/*",
+  "sw.js",
+  "workbox-*.js"
+]
