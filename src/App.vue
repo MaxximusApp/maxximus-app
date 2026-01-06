@@ -42,7 +42,7 @@
                 v-model="email"
                 type="email"
                 placeholder="seu@email.com"
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 dark:bg-gray-700"
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 dark:bg-gray-700 dark:text-white"
               />
             </div>
             <div>
@@ -51,7 +51,7 @@
                 v-model="password"
                 type="password"
                 placeholder="********"
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 dark:bg-gray-700"
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 dark:bg-gray-700 dark:text-white"
               />
             </div>
             <button
@@ -67,22 +67,22 @@
         <div v-if="isAuthenticated" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6">
             <h3 class="text-xl font-bold mb-2">📊 Dashboard</h3>
-            <p>Seu painel principal</p>
+            <p class="text-gray-600 dark:text-gray-400">Seu painel principal</p>
           </div>
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6">
             <h3 class="text-xl font-bold mb-2">✅ Hábitos</h3>
-            <p>Gerencie seus hábitos</p>
+            <p class="text-gray-600 dark:text-gray-400">Gerencie seus hábitos</p>
           </div>
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6">
             <h3 class="text-xl font-bold mb-2">📈 Progresso</h3>
-            <p>Acompanhe sua evolução</p>
+            <p class="text-gray-600 dark:text-gray-400">Acompanhe sua evolução</p>
           </div>
         </div>
 
         <!-- Welcome Message -->
         <div v-if="!isAuthenticated && !showLogin" class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 text-center">
           <h2 class="text-3xl font-bold mb-4">🎉 App Funcionando!</h2>
-          <p class="text-lg mb-4">Seu Maxximus App está rodando perfeitamente!</p>
+          <p class="text-lg mb-4 text-gray-600 dark:text-gray-400">Seu Maxximus App está rodando perfeitamente!</p>
           <button
             @click="showLogin = true"
             class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition"
